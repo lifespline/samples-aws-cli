@@ -4,9 +4,10 @@ AWS CLI V2
 
 Suffix all commands with your AWS profile ``--profile <profile>``.
 
-Empty Bucket
-------------
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
 
-.. code:: bash
+   s3/api
+   cloudfront/api
 
-   $ aws s3 rm s3://<bucket-name> --recursive

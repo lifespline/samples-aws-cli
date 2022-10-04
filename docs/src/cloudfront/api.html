@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Contributing" href="contributing.html" /><link rel="prev" title="Usage" href="usage.html" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Contributing" href="../contributing.html" /><link rel="prev" title="S3 API" href="../s3/api.html" />
 
     <meta name="generator" content="sphinx-5.2.3, furo 2022.09.29"/>
-        <title>Development - Lifespline AWS Samples: CLI V2 1.0.0-beta documentation</title>
+        <title>CloudFront API - Lifespline AWS Samples: CLI V2 1.0.0-beta documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -156,20 +156,20 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">AWS CLI V2</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../api.html">AWS CLI V2</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../s3/api.html">S3 API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cloudfront/api.html">CloudFront API</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">CloudFront API</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../contributing.html">Contributing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="contributing.html">Contributing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="changelog.html">Changelog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="license.html">License</a></li>
-<li class="toctree-l2"><a class="reference internal" href="authors.html">Authors</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contributing.html">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/configuration.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/usage.html">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/development.html">Development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/contributing.html">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/changelog.html">Changelog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/license.html">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/authors.html">Authors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../literature.html">Literature</a></li>
@@ -207,28 +207,13 @@
           </label>
         </div>
         <article role="main">
-          <a href="https://github.com/lifespline/samples-sphinx.git"><img loading="lazy" width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork Me On Github" data-recalc-dims="1"></a><section id="development">
-<h1>Development<a class="headerlink" href="#development" title="Permalink to this heading">#</a></h1>
-<section id="docs-structure">
-<h2>Docs Structure<a class="headerlink" href="#docs-structure" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── docs
-│   ├── sphinx
-│   ├── .nojekyll
-│   ├── _templates
-│   ├── conf.py
-│   ├── index.rst
-│   ├── make.bat
-│   └── Makefile
+          <section id="cloudfront-api">
+<h1>CloudFront API<a class="headerlink" href="#cloudfront-api" title="Permalink to this heading">#</a></h1>
+<section id="invalidate-all-cloudfront-edge-cached-files">
+<h2>Invalidate all cloudfront edge cached files<a class="headerlink" href="#invalidate-all-cloudfront-edge-cached-files" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>aws cloudfront create-invalidation --distribution-id &lt;dist-id&gt; --paths <span class="s2">&quot;/*&quot;</span>
 </pre></div>
 </div>
-</section>
-<section id="images">
-<h2>Images<a class="headerlink" href="#images" title="Permalink to this heading">#</a></h2>
-<p>Images are contained in <code class="docutils literal notranslate"><span class="pre">docs/sphinx/static/img/</span></code>.</p>
-</section>
-<section id="module-tasks">
-<span id="task-runner"></span><h2>Task Runner<a class="headerlink" href="#module-tasks" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://www.pyinvoke.org/">invoke</a> is the project’s task runner. The tasks are defined at <code class="docutils literal notranslate"><span class="pre">tasks.py</span></code>.</p>
 </section>
 </section>
 
@@ -237,7 +222,7 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="contributing.html">
+          <a class="next-page" href="../contributing.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
@@ -246,14 +231,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="usage.html">
+          <a class="prev-page" href="../s3/api.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Usage</div>
+                <div class="title">S3 API</div>
                 
               </div>
             </a>
@@ -289,10 +274,8 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Development</a><ul>
-<li><a class="reference internal" href="#docs-structure">Docs Structure</a></li>
-<li><a class="reference internal" href="#images">Images</a></li>
-<li><a class="reference internal" href="#module-tasks">Task Runner</a></li>
+<li><a class="reference internal" href="#">CloudFront API</a><ul>
+<li><a class="reference internal" href="#invalidate-all-cloudfront-edge-cached-files">Invalidate all cloudfront edge cached files</a></li>
 </ul>
 </li>
 </ul>
