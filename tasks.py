@@ -10,8 +10,7 @@ def docs(ctx, step='build'):
 
     :param ctx: _description_
     :type ctx: _type_
-    :param step: ``build`` to build the docs, ``clean`` to remove the built 
-    docs, defaults to ``build``.
+    :param step: ``build`` to build the docs, ``clean`` to remove the built docs, defaults to 'build'.
     :type step: str, optional
     """
     if step == 'build':
@@ -27,7 +26,18 @@ def docs(ctx, step='build'):
             "cd docs/sphinx",
             "make clean",
             "cd ..",
-            "rm -rf src .buildinfo _sources _static .nojekyll genindex.html index.html objects.inv search.html searchindex.js py-modindex.html",
+            "rm -rf _downloads",
+            "rm -rf _images",
+            "rm -rf src",
+            "rm -rf .buildinfo",
+            "rm -rf _sources",
+            "rm -rf _static",
+            "rm -rf genindex.html",
+            "rm -rf index.html",
+            "rm -rf objects.inv",
+            "rm -rf search.html",
+            "rm -rf searchindex.js",
+            "rm -rf py-modindex.html",
         ]
 
     ctx.run(';'.join(cmds))
